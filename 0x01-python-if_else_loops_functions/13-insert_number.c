@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
 #include "lists.h"
+#include <unistd.h>
 /**
- * insert_node - inserts a number into a sorted list
+ * insert_node - insert a number into a sorted list
  *
  * @head: a linked list
  *
  * @number: number to be inserted
  *
- * Return: pointer to the next head
+ * Return: pointer to the new node
  */
 listint_t *insert_node(listint_t **head, int number)
 {
@@ -30,7 +30,7 @@ listint_t *insert_node(listint_t **head, int number)
 	if (!*head || (*head)->n > number)
 	{
 		new->next = *head;
-		return (*head = new)
+		return (*head = new);
 	}
 	else
 	{
